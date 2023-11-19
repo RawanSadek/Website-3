@@ -1,0 +1,798 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../Images/palestinian-israel-palestine-jerusalem.webp);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+body::after{
+    content: "";
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -2;
+}
+
+/* ********************************* hrader ********************************* */
+.container{
+    max-width: 90%;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+}
+
+.title{
+    text-transform: uppercase;
+    margin-right: auto;
+    margin-left: 7px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(217, 9, 9) 20%, white 60%, rgb(20, 102, 20) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav{
+    position: fixed;
+    background-color: black;
+}
+
+
+
+.navbar-toggler{
+    border: 1px solid;
+    color: rgb(248,249,250);
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded=true]{
+    border-width: 2px;
+    color: rgb(0, 107, 0);
+}
+
+.navbar-toggler[aria-expanded=true] .navbar-toggler > i{
+    color: rgb(0, 107, 0);
+}
+
+.nav-link{
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.nav-link:hover, .dropdown .btn:hover{
+    font-size: 20px;
+    text-shadow: 0px 0px 10px rgb(248,249,250) ;
+}
+
+.nav-link:hover::first-letter, .dropdown .btn:hover::first-letter{
+    color: green;
+}
+
+.dropdown .btn{
+    background-color: transparent;
+}
+
+.dropdown .dropdown-menu{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dropdown .dropdown-menu li{
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(167, 169, 172);
+}
+
+.dropdown .dropdown-menu li:last-child{
+    margin-top: 5px;
+    border-top: 1px solid  rgb(167, 169, 172);
+}
+
+.input-group button{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.nav-item:first-child a{
+    color: rgb(0, 107, 0);
+}
+
+#nav-button{
+    background-color: transparent;
+}
+
+.container form input{
+    border: 1px solid rgb(0, 107, 0);
+    background-color: transparent;
+}
+
+.container form input::placeholder{
+    color: rgb(167, 169, 172);
+}
+
+.search-btn{
+    color: rgb(0, 107, 0);
+    border-left: 1px solid rgb(0, 107, 0);
+    padding: 5px 20px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+
+.login-btn{
+    width: 60px;
+    height: 36px;
+    background-color: rgb(0, 107, 0);
+    color: rgb(248,249,250);
+    border-radius: 8px;
+    border: none;
+}
+
+.login-btn:hover, .search-btn:hover{
+    opacity: 0.8;
+}
+
+.modal-backdrop {
+    z-index: 0;
+ }
+
+.modal-header{
+    background-color: rgb(0, 107, 0);
+    color: rgb(248,249,250);
+}
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(0, 107, 0);
+}
+
+.modal-content ::placeholder{
+    color: rgb(248,249,250,0.6);
+}
+
+.form-switch{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.form-check-input:checked{
+    background-color: rgb(0, 107, 0);
+}
+
+.modal-body input{
+    background-color: transparent;
+    border-color: rgb(0, 107, 0);
+    padding-left: 30px;
+    color: rgb(227, 227, 227);
+}
+
+.modal-body input:focus{
+    background-color: transparent;
+    color: rgb(227, 227, 227);
+}
+
+.modal-body i{
+    margin-top: -50px;
+    left: 25px;
+}
+
+.modal-body input:active .modal-body i{
+    visibility: hidden;
+}
+
+.pass{
+    top: 90px;
+}
+
+
+/* ******************************************************* carousel ******************************************************* */
+.carousel{
+    margin-top: 75px;
+}
+
+.carousel-item{
+    height: 600px;
+    position: relative;
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: rgb(248,249,250);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.carousel-caption h2{
+    font-size: 45px;
+}
+
+.carousel-caption p{
+    font-size: 18px;
+
+}
+
+.carousel-caption a{
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 107, 0);
+    padding: 5px;
+    color: rgb(248,249,250);
+}
+
+.carousel-caption a:hover{
+   background-color: rgb(0, 90, 0);
+}
+
+
+.aside{
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.aside a{
+    color: rgb(0, 107, 0);
+    font-size: 55px;
+}
+
+.aside a:hover{
+    color: rgb(0, 90, 0);
+}
+
+/* ***************************************************** welcome ********************************************************* */
+.welcome{
+    /* margin: 20px 0; */
+    padding: 30px;
+    background-color: black;
+}
+
+.welcome h2{
+    background: -webkit-linear-gradient(rgb(217, 9, 9) 20%, white 60%, rgb(23, 116, 23) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome p{
+    color: rgb(248,249,250);
+}
+
+.welcome .btn{
+    background-color: rgb(0, 107, 0);
+    color: rgb(248,249,250);
+}
+
+.welcome .btn:hover{
+    opacity: 0.8;
+}
+
+/* ***************************************************** destinations  ********************************************************* */
+
+
+.destinations .title2{
+    font-size: 42px;
+    background: -webkit-linear-gradient(rgb(208, 9, 9) 30%, white 60%, rgb(26, 106, 26) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.accordion-item button{
+    background: -webkit-linear-gradient(top, rgb(47, 47, 47), rgb(0, 0, 0));
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.accordion-body{
+    background-color: rgb(227, 227, 227);
+    color: rgb(144, 144, 144);
+    font-size: 18px;
+}
+
+.card{
+    position: relative;
+    box-shadow: 0px 0px 50px 15px rgb(34, 34, 34);
+}
+
+.card button{
+    position: absolute;
+    width: 100px;
+    height: 37px;
+    background-color: rgb(0, 107, 0);
+    color: rgb(248,249,250);
+    border: none;
+    right: 25px;
+    top: 370px;
+}
+
+.card button:hover{
+    opacity: 0.8;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    background-image: url(../Images/palestine.jpg);
+    background-size: 100% 100%;
+    opacity: 0.3;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    transition: 1s;
+}
+
+.card:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    background-image: url(../Images/palestine.jpg);
+    background-size: 100% 100%;
+    opacity: 0.3;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    transition: 1s;
+}
+
+.card:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ***************************************************** news  ********************************************************* */
+
+.news h2{
+    background: -webkit-linear-gradient(rgb(217, 9, 9) 20%, white 60%, rgb(20, 102, 20) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px
+}
+
+.news-item{
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 10px rgb(34, 34, 34);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.news-content{
+    width: 70%;
+    padding: 60px;
+    padding-right: 20px;
+}
+
+.img-left .news-content{
+    margin-left: 30%;
+}
+
+.news-content .title3{
+    font-size: 40px;
+}
+
+.img-container{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    
+    background-size: 100% 100%;
+    transition: 0.5s;
+    background-position: center;
+}
+
+
+
+.img-1{
+    background-image: url(../Images/news.jpg);
+}
+
+.img-2{
+    background-image: url(../Images/news2.jpg);
+}
+
+.img-3{
+    background-image: url(../Images/news3.jpg);
+}
+
+.img-4{
+    background-image: url(../Images/news4.jpg);
+}
+
+.img-right .img-container{
+    right: 0px;
+    clip-path: polygon(5% 0, 100% 0%, 100% 100%, 35% 100%);
+}
+
+.img-left .img-container{
+    clip-path: polygon(0% 0%, 95% 0, 65% 100%, 0% 100%);
+}
+
+@media(max-width: 1100px)
+{
+    .img-left .img-container, .img-right .img-container{
+        clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@media(max-width: 800px)
+{
+    .img-left .img-container{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+    }
+
+    .img-right .img-container{
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 40%;
+    }
+
+    .news-content{
+        width: 100%;
+        margin-top: 40%;
+    }
+
+    .img-left .news-content{
+        margin-left: 0%;
+    }
+}
+
+.news-content .line{
+    width: 50px;
+    height: 5px;
+    background-color: rgb(0, 107, 0);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.news-item:hover .news-content .line{
+    width: 100px;
+}
+
+.news-item:hover .img-container{
+    background-size: 120% 120%;
+}
+
+.news-content button{
+    background-color: rgb(0, 107, 0);
+    border: none;
+}
+
+.news-content button:hover{
+    opacity: 0.8;
+}
+
+
+/* ***************************************************** thanks ********************************************************* */
+.thanks{
+    margin-top: 200px;
+    background-color: rgba(0, 0, 0);
+    padding: 80px 0;
+}
+
+.thanks h2{
+    background: -webkit-linear-gradient(rgb(217, 9, 9) 20%, white 60%, rgb(20, 102, 20) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+.thanks-item{
+    height: 470px;
+    margin-bottom: 30px;
+}
+
+.thanks-content{
+    background-size: 100% 100%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.thanks-item:nth-child(1) .thanks-content{
+    height: 100%;
+    background-image: url(../Images/motaz-azaiza.jpeg);
+    box-shadow: 0px 0px 200px 80px rgb(44, 42, 42) inset;
+}
+
+.thanks-item:nth-child(2) .thanks-content{
+    height: 100%;
+    background-image: url(../Images/abdallah-alattar.jpeg);
+    box-shadow: 0px 0px 200px 80px rgb(44, 42, 42) inset;
+}
+
+.thanks-item:nth-child(3) .thanks-content{
+    height: 100%;
+    background-image: url(../Images/plestia-alaqad.jpeg);
+    box-shadow: 0px 0px 200px 80px rgb(44, 42, 42) inset;
+}
+
+.thanks-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: -12px;
+    padding: 40px;
+    margin-left: auto;
+}
+
+.overlay-footer{
+    margin-top: 150px;
+    transition: 0.3s;
+}
+
+.img-mask{
+    width: 45%;
+    height: 40%;
+    
+    background-size: 100% 100%;
+    clip-path: ellipse(36% 46% at 49% 52%);
+}
+
+.thanks-item:nth-child(1) .thanks-overlay .img-mask{
+    background-image: url(../Images/motaz-azaiza2.jpg); 
+}
+
+.thanks-item:nth-child(2) .thanks-overlay .img-mask{
+    background-image: url(../Images/abdallah-alattar2.jpg); 
+}
+
+.thanks-item:nth-child(3) .thanks-overlay .img-mask{
+    background-image: url(../Images/plestia-alaqad2.jpeg); 
+}
+
+.thanks-overlay .job{
+    margin-top: -10px;
+}
+
+.thanks-content:hover{
+    transform: scale(0.9);
+}
+
+.thanks-content h4{
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.thanks-content:hover h4{
+   transform: translate(0, 30px);
+}
+
+.thanks-content:hover .thanks-overlay{
+    box-shadow: 0px 0px 200px 120px rgb(27, 26, 26) inset;
+    transition: 0.3s;
+}
+
+.thanks-content:hover .overlay-footer > *{
+    margin: auto;
+}
+
+/* ***************************************************** comment ********************************************************* */
+.comment{
+    margin: 70px 0;
+}
+
+.comment-title{
+    padding: 10px 50px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.comment-title h2{
+    font-size: 45px;
+}
+
+.comment-content{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    color: white;
+    margin-bottom: 70px;
+}
+
+.comment-content p a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(0, 107, 0);
+}
+
+.comment-content p a:hover{
+    opacity: 0.7;
+}
+
+textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.comment-content button{
+    width: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(0, 107, 0);
+    color: white;
+    border: none;
+    position: relative;
+}
+
+.comment-content button:hover{
+    opacity: 0.7;
+}
+
+.comment-content button::before{
+    content: "copy to clipboard";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 100px;
+    border-radius: 0 20px 20px 20px;
+
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+}
+
+.comment-content button:hover::before{
+    opacity: 1;
+}
+
+.comment-content button:active::before{
+    opacity: 0;
+}
+
+.comment-content button::after{
+    content: "copied";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 100px;
+    border-radius: 0 20px 20px 20px;
+
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+}
+
+.comment-content button:active::after{
+    opacity: 1;
+}
+
+.popover{
+    background-color: rgba(0, 0, 0, 0.663);
+    border-radius: 10px;
+}
+
+/* ***************************************************** join ********************************************************* */
+.join{
+    margin: 70px auto 10px;
+}
+
+.join-us{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.join-us img{
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.join-us img:hover{
+    opacity: 0.7;
+}
+
+.join-us p a{
+    color: white;
+    font-size: 18;
+    text-decoration: none;
+}
+
+.join-us p a:hover{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ***************************************************** footer ********************************************************* */
+.footer{
+    background-color: black;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.icons i{
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icons i:hover{
+    opacity: 0.7;
+}
+
+.footer-col p a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-col p a:hover{
+    opacity: 0.7;
+}
+
+.col3-title{
+    color: white;
+    font-size: 18px;
+
+}
+
+.footer-col input{
+    width: 220px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.footer-col button{
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 107, 0);
+    border: none;
+    display: block;
+    margin: 10px 50px;
+}
+
+.footer-col button:hover{
+    opacity: 0.8;
+}
