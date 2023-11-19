@@ -664,7 +664,7 @@ textarea{
     opacity: 0.7;
 }
 
-.comment-content button::before{
+.comment-content .copy-btn::before{
     content: "copy to clipboard";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.2);
@@ -677,15 +677,15 @@ textarea{
     opacity: 0;
 }
 
-.comment-content button:hover::before{
+.comment-content .copy-btn:hover::before{
     opacity: 1;
 }
 
-.comment-content button:active::before{
+.comment-content .copy-btn:active::before{
     opacity: 0;
 }
 
-.comment-content button::after{
+.comment-content .copy-btn::after{
     content: "copied";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.2);
@@ -698,7 +698,7 @@ textarea{
     opacity: 0;
 }
 
-.comment-content button:active::after{
+.comment-content .copy-btn:active::after{
     opacity: 1;
 }
 

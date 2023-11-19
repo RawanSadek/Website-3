@@ -1,4 +1,4 @@
-var btn = document.querySelector(".comment-content button")
+var btn = document.querySelector(".comment-content .copy-btn")
 
 btn.addEventListener("click", function ()
 {
